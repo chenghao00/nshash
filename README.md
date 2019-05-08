@@ -12,9 +12,9 @@ similar_id = nsh.get_similar(doc_text)
 ```
 
 `NShash`类有三个参数：
-+ name： 用于hashdb保存到硬盘的文件名，如果hashdb是HashDBMemory, 则用pickle序列化到硬盘；如果是HashDBLeveldb，则leveldb目录名为：name+'.hashdb'。name按需随便起即可。
-+ hashfunc: 计算hash值的具体函数类别，目前实现两种类型：`md5`和`farmhash`。默认是`md5`，方便Windows上安装farmhash不方便。
-+ hashdb：默认是`memory`即选择HashDBMemory，否则是HashDBLeveldb。
++ `name`： 用于hashdb保存到硬盘的文件名，如果hashdb是HashDBMemory, 则用pickle序列化到硬盘；如果是HashDBLeveldb，则leveldb目录名为：name+'.hashdb'。name按需随便起即可。
++ `hashfunc`: 计算hash值的具体函数类别，目前实现两种类型：`md5`和`farmhash`。默认是`md5`，方便Windows上安装farmhash不方便。
++ `hashdb`：默认是`memory`即选择HashDBMemory，否则是HashDBLeveldb。
 
 如果你想用Redis或MySQL等其它数据库来实现HashDB，可以参照HashDBLeveldb、HashDBMemory进行实现。
 
